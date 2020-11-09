@@ -1,0 +1,238 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-08T23:07:23.413Z",
+        "line": 14,
+        "name": "Verify if location is successfully added using AddPlace API",
+        "description": "",
+        "id": "add-place-to-google-maps;verify-if-location-is-successfully-added-using-addplace-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2900000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "required input payload with \"mithu\", \"French-IN\" and \"123 royal Ln\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"mithu\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"French-IN\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"123 royal Ln\"",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefinition.stepDefinition.required_input_payload_with_and(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4774000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "users calls \"AddPlaceAPI\" using \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.stepDefinition.users_calls_using_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "API call is successful with status code",
+            "match": {
+              "location": "stepDefinition.stepDefinition.api_call_is_successful_with_status_code()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1782000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinition.stepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.stepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3115000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "validate \"getPlaceAPI\" using place_id generated mapping to \"mithu\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"getPlaceAPI\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"mithu\"",
+                  "offset": 59
+                }
+              ],
+              "location": "stepDefinition.stepDefinition.validate_using_place_id_generated_mapping_to(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-08T23:07:36.274Z",
+        "line": 19,
+        "name": "Validate Delete Place API functionality",
+        "description": "",
+        "id": "add-place-to-google-maps;validate-delete-place-api-functionality",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "DeletePlaceAPI payload",
+            "match": {
+              "location": "stepDefinition.stepDefinition.delete_place_api_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3248000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "users calls \"deletePlaceAPI\" using \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"deletePlaceAPI\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinition.stepDefinition.users_calls_using_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "API call is successful with status code",
+            "match": {
+              "location": "stepDefinition.stepDefinition.api_call_is_successful_with_status_code()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinition.stepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Add Place to Google Maps",
+    "description": "",
+    "id": "add-place-to-google-maps",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidation.feature",
+    "tags": []
+  }
+]
